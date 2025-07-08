@@ -2,13 +2,13 @@ CREATE DATABASE it_club;
 USE it_club;
 
 CREATE TABLE mentors(
-mentor_id INT NOT NULL,
+mentor_id BIGINT NOT NULL,
 first_name VARCHAR(50) NOT NULL,
 last_name VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL,
 phone VARCHAR(50) NOT NULL,
 is_student BOOL NOT NULL,
-student_id_if_student INT NULL,
+student_id_if_student BIGINT NULL,
 git_hub VARCHAR(255) NULL,
 linkedin VARCHAR(255) NULL,
 portfolio VARCHAR(255) NULL,
@@ -17,7 +17,7 @@ CONSTRAINT mentors_pk PRIMARY KEY(mentor_id)
 );
 
 CREATE TABLE students(
-student_id INT NOT NULL,
+student_id BIGINT NOT NULL,
 first_name VARCHAR(50) NOT NULL,
 last_name VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL,
@@ -28,7 +28,7 @@ major_track CHAR(50) NULL,
 hours_passed INT NOT NULL,
 git_hub VARCHAR(255) NULL,
 linkedin VARCHAR(255) NULL,
-mentor_id INT NULL,
+mentor_id BIGINT NULL,
 student_resume VARCHAR(255) NULL,
 remarks VARCHAR(1023) NULL, 
 CONSTRAINT students_pk PRIMARY KEY(student_id),
@@ -49,7 +49,7 @@ ON DELETE NO ACTION;
 CREATE TABLE club_teams(
 team_id INT NOT NULL,
 team_name VARCHAR(255) NOT NULL,
-team_leader INT NOT NULL,
+team_leader BIGINT NOT NULL,
 remarks VARCHAR(1023) NULL,
 CONSTRAINT club_teams_pk PRIMARY KEY(team_id),
 CONSTRAINT club_teams_unique_team_name UNIQUE(team_name),
@@ -62,7 +62,7 @@ ON DELETE NO ACTION
 CREATE TABLE club_events(
 event_id INT NOT NULL,
 event_name VARCHAR(255) NOT NULL,
-event_leader INT NOT NULL,
+event_leader BIGINT NOT NULL,
 event_team INT NOT NULL,
 event_type VARCHAR(50) NOT NULL,
 num_of_max_students INT NULL,
@@ -82,7 +82,7 @@ ON DELETE NO ACTION
 
 
 CREATE TABLE students_teams_intersection(
-student_id INT NOT NULL,
+student_id BIGINT NOT NULL,
 team_id INT NOT NULL,
 date_joined DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
 student_title VARCHAR(50) NULL DEFAULT 'Member',
@@ -98,7 +98,7 @@ ON DELETE NO ACTION
 );
 
 CREATE TABLE students_events_intersection(
-student_id INT NOT NULL,
+student_id BIGINT NOT NULL,
 event_id INT NOT NULL,
 date_attended DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
 CONSTRAINT students_events_intersection_pk PRIMARY KEY(student_id,event_id),
@@ -113,7 +113,7 @@ ON DELETE NO ACTION
 );
 
 CREATE TABLE student_certificates(
-student_id INT NOT NULL,
+student_id BIGINT NOT NULL,
 certificate VARCHAR(255) NOT NULL,
 date_aquired DATE NULL,
 remarks VARCHAR(1023) NULL,
@@ -140,7 +140,7 @@ ORDER BY T.team_id;
 
 DELIMITER //
 CREATE PROCEDURE insert_student_from_sheets(
-	IN p_student_id INT,
+	IN p_student_id BIGINT,
 	IN p_first_name VARCHAR(50),
 	IN last_name VARCHAR(50),
 	IN p_email VARCHAR(50),

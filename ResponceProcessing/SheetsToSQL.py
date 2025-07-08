@@ -3,8 +3,8 @@ from oauth2client.service_account import ServiceAccountCredentials
 import mysql.connector
 
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("abiding-cistern-464415-d0-fa91a9de59d8.json", scope)
-client  =gspread.authorize(creds)
+creds = ServiceAccountCredentials.from_json_keyfile_name("abiding-cistern-464415-d0-ec5237e43032.json", scope)
+client = gspread.authorize(creds)
 
 sheet = client.open('Registration Responses').sheet1
 data =sheet.get_all_records()
@@ -37,6 +37,7 @@ for row in data:
     first_name = null_prevention(row['First Name'])
     last_name = null_prevention(row['Last Name'])
     email = null_prevention(row['Email'])
+    phone = null_prevention(str(row['Phone Number']))
     major_str = row['Major']
     major = 'X'
     remarks = ''
@@ -62,6 +63,8 @@ for row in data:
         major_track = 'AI/MLT'
     elif major_track_str == 'Computer Vision and Robotics Track':
         major_track = 'CV/RT'
+    elif major_track_str == '5G and Internet of Things (IoT) Track':
+        major_track = '5G/IOTT'
     else:
         remarks = ''.join([remarks,'\nTrack is ',major_track_str])
     major_track = null_prevention(major_track)
@@ -91,7 +94,7 @@ for row in data:
 
     remarks = null_prevention(remarks)
 
-    cursor.execute(f'CALL insert_student_from_sheets({uni_id},{first_name},{last_name},{email},{year},{major},{major_track},{hours_passed},{git_hub},{linkedin},{student_resume},{remarks})')
+    cursor.execute(f'CALL insert_student_from_sheets({uni_id},{first_name},{last_name},{email},{phone},{year},{major},{major_track},{hours_passed},{git_hub},{linkedin},{student_resume},{remarks})')
 
 db.commit()
 print('done')

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "abiding-cistern-464415-d0",
+  "private_key_id": "ec5237e430327a139c4fc6bc6d01d374e996e4e7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCPbgAHjeC1cdmy\nZVqjaFjV534PwkuaHckKIGe+f+KMW5I+zE5GOu40BnLaVydhBV2KpFNTk1i00NLd\n8pPKR+W3i4NEk/MXgGfewu2EZ8bXmlf22Mz+EXoBLT1x/x+lrag1DXm9TKvZjnxL\ndpdp/eIu/oXQqNE3II7vkq1uB0INhWDf9QqDgt5b57eEVIKvm84fDSuTRKQA11+N\nmscU9R5LxNDauMm8ZO6dxh9z/+2FG/WwAswTf+LIYJht6Dx2SGdpBhxIHizI6opB\nOJZ9m5H8DLr5U7OrwGb3s2ew34CJEmag11PdkjYuO72bPfN1WVpPAjpApAJe4vcT\njVuevGC1AgMBAAECggEAAyFRLlkGD6enqtlD6F+JWse1zFW+7SLbxZUN9o4XbV09\nPJIcXjOAidGfNY0j3p3tm+44pFEJpU6OX4og+A/oH0CT8Y3yBvAGNEoYQWS7Ze6o\nH0q9dIkAmuB4IBIDiIvY6Sl9X+h5sqKFq2bv6IACLOjgljxs7nFPNULD9qwBYMah\nRcgO73APmPDjyM0HEWljcQTHX8en5aaH+tI4KBCLOXMtL9sEYEXOCvs0Ar1JNVe3\n1v4YTg5jQJiqU57F+eKoTTVfghNUxiJTI6oa9vu9EcXWSJGaubL1rpOvzur4UuXf\nKBwwbSml72tYnL7FFJAKutTm9RS9slg60GWLlPGLgQKBgQDJ8PFufZU5S14LE4xi\ne17Vy7pP8/YpSv1Egj0ow3+X0Gr0fMo+Jc5nT5sHVVcxtLxCopk09h3KlUS9k2kw\n1t+jm29mSTyaQ0PISLpuviOcxXW7Wgx3cnWaYHNySX7a8IyCk5/+bO5qIHJ3k3cR\nm40mfHXsWwQTTiviS9FbI1rtNQKBgQC100GXMO5mMbKqqUlhO6EYplXgCrHr0l5x\n+GbimMAoMzxke5uKxpHRfXeRqf6GGBKFr3/SPmrD2oYN52kOoxlwX4YGrzb6NURx\nhEjh+IennoKVaJ3ypkOG0rKqs58//38fyu2VXadQifRnh6QwgIEyufVGVnE2bA7N\nbiFnRM+VgQKBgBENVXW9CQLDiHdq+Sm/vSxUfbEOqrSl7mkAjmWIzJdnNADdIL7K\ntnkm0bJ21FwQJO2DiWhdd/qJTDqt3e4P1uab03ZRrNph37Fj4spDKAKu8dgWLINR\nmPimOFloN1wJf/Puv03eqOsxPjk2rJFCD1M2o0aIEPoIWdBMEqudeqoZAoGAcAvp\nRYRPxQYnNefwYkzer1QBY3jzv4D51n3e2RCMiblZJArQBSrsvQ32WvtI79VxxJQr\nzqHMJTlKltLd+LklegxDiWb8GCAvN0zvpOEEp5SUoAHCI7+1qSW6GFtsbYHDExJ4\nai02Z/k7dXkvAvyNoXba4SdvyLu6O3n8d6j9ywECgYBxjqQ49EowI14GM/cMN1hc\nIDd7QV3JzDAKvA4mg8ZFQAB3TgHV7JtKU9MAmobULiJJVxjNlIpgnIK6BHrzvnfm\n/YpTV8ryXMZ/ZrrGtzRBrF5h+CGFSnVDkXk8TwQgiUvYzXSvXfGYokxPfz/E9xSD\neWFWHDtCjIMlD5bu5Mq54Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "sheets-reader@abiding-cistern-464415-d0.iam.gserviceaccount.com",
+  "client_id": "112214650854531527516",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sheets-reader%40abiding-cistern-464415-d0.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

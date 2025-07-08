@@ -21,6 +21,7 @@ student_id INT NOT NULL,
 first_name VARCHAR(50) NOT NULL,
 last_name VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL,
+phone VARCHAR(20) NOT NULL,
 study_year INT NOT NULL, 
 major VARCHAR(50) NOT NULL,
 major_track CHAR(50) NULL,
@@ -29,7 +30,7 @@ git_hub VARCHAR(255) NULL,
 linkedin VARCHAR(255) NULL,
 mentor_id INT NULL,
 student_resume VARCHAR(255) NULL,
-remarks VARCHAR(1023) NULL,
+remarks VARCHAR(1023) NULL, 
 CONSTRAINT students_pk PRIMARY KEY(student_id),
 CONSTRAINT students_mentors_fk FOREIGN KEY(mentor_id)
 REFERENCES mentors(mentor_id)
@@ -143,6 +144,7 @@ CREATE PROCEDURE insert_student_from_sheets(
 	IN p_first_name VARCHAR(50),
 	IN last_name VARCHAR(50),
 	IN p_email VARCHAR(50),
+    IN p_phone VARCHAR(20),
 	IN p_study_year INT, 
 	IN p_major VARCHAR(50),
 	IN p_major_track CHAR(50),
@@ -160,8 +162,8 @@ BEGIN
     WHERE student_id = p_student_id;
     
 	IF	student_exists = 0 THEN
-		INSERT INTO students(student_id, first_name, last_name, email, study_year, major, major_track, hours_passed, git_hub, linkedin, student_resume, remarks)
-        VALUES(p_student_id, p_first_name, last_name, p_email, p_study_year, p_major, p_major_track, p_hours_passed, p_git_hub, p_linkedin, p_student_resume, p_remarks);
+		INSERT INTO students(student_id, first_name, last_name, email, phone, study_year, major, major_track, hours_passed, git_hub, linkedin, student_resume, remarks)
+        VALUES(p_student_id, p_first_name, last_name, p_email, p_phone, p_study_year, p_major, p_major_track, p_hours_passed, p_git_hub, p_linkedin, p_student_resume, p_remarks);
 	ELSE 
 		SELECT "USER ALREADY IN DATABASE" AS MESSAGE;
     END IF;
